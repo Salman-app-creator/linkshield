@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LinkShield Sandbox — Secure Browser & Media Grabber</title>
+<link rel="icon" type="image/png" href="ic_app_logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -59,11 +60,11 @@ nav{
 }
 .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px}
-.nav-logo-icon{
-  width:36px;height:36px;border-radius:10px;
-  background:linear-gradient(135deg,var(--cyan),var(--purple));
-  display:flex;align-items:center;justify-content:center;
-  font-size:18px;box-shadow:0 0 20px rgba(0,240,255,0.4);
+.nav-logo-img{
+  width:38px;height:38px;border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 0 20px rgba(0,240,255,0.4);
+  border:2px solid rgba(0,240,255,0.3);
 }
 .nav-btn{
   background:linear-gradient(135deg,var(--cyan),var(--green));
@@ -75,6 +76,16 @@ nav{
 .nav-btn:active{transform:scale(.95)}
 
 .hero{max-width:1200px;margin:0 auto;padding:60px 24px 40px;text-align:center;position:relative}
+.hero-logo{
+  width:110px;height:110px;border-radius:50%;
+  object-fit:cover;
+  margin:0 auto 24px;
+  display:block;
+  box-shadow:0 0 50px rgba(0,240,255,0.4),0 20px 60px rgba(124,58,237,0.3);
+  border:2px solid rgba(0,240,255,0.3);
+  animation:fadeUp .8s ease both;
+  background:#0a0f1a;
+}
 .badge{
   display:inline-flex;align-items:center;gap:6px;
   background:rgba(0,240,255,0.08);border:1px solid rgba(0,240,255,0.3);
@@ -150,7 +161,12 @@ h1 .grad{
   display:flex;flex-direction:column;gap:12px;
 }
 .mock-header{display:flex;align-items:center;gap:8px;padding-bottom:12px;border-bottom:1px solid rgba(0,240,255,0.1)}
-.mock-logo{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,var(--cyan),var(--purple));display:flex;align-items:center;justify-content:center;font-size:14px}
+.mock-logo-img{
+  width:32px;height:32px;border-radius:50%;
+  object-fit:cover;
+  border:1.5px solid rgba(0,240,255,0.4);
+  background:#0a0f14;
+}
 .mock-shield{background:rgba(0,255,148,0.15);color:var(--green);padding:4px 10px;border-radius:10px;font-size:10px;font-weight:700;border:1px solid rgba(0,255,148,0.4)}
 .mock-url{
   background:rgba(255,255,255,0.05);border:1px solid rgba(0,240,255,0.2);
@@ -272,6 +288,11 @@ footer{
   background:rgba(6,8,13,0.8);backdrop-filter:blur(20px);
 }
 .foot-logo{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;font-family:'Space Grotesk',sans-serif;font-weight:700}
+.foot-logo-img{
+  width:36px;height:36px;border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(0,240,255,0.3);
+}
 .foot-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
 .foot-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .3s}
 .foot-links a:hover{color:var(--cyan)}
@@ -286,8 +307,9 @@ footer{
   transform:translateY(100%);transition:transform .4s;
 }
 .sticky-cta.show{transform:translateY(0)}
-.sticky-cta .label{font-size:12px;color:var(--muted)}
+.sticky-cta .label{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:10px}
 .sticky-cta .label strong{display:block;color:var(--text);font-size:14px}
+.sticky-logo{width:32px;height:32px;border-radius:50%;object-fit:cover;border:1.5px solid rgba(0,240,255,0.3)}
 .sticky-cta .sbtn{
   background:linear-gradient(135deg,var(--cyan),var(--green));color:#000;
   padding:11px 22px;border-radius:50px;font-weight:800;font-size:13px;
@@ -316,7 +338,7 @@ footer{
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">
-      <div class="nav-logo-icon">🛡️</div>
+      <img src="ic_app_logo.png" alt="LinkShield Logo" class="nav-logo-img">
       <span>LinkShield</span>
     </div>
     <a href="#download" class="nav-btn">Download APK</a>
@@ -324,6 +346,7 @@ footer{
 </nav>
 
 <header class="hero">
+  <img src="ic_app_logo.png" alt="LinkShield Sandbox" class="hero-logo">
   <div class="badge">
     <span class="badge-dot"></span>
     v2.6 · Now Available
@@ -338,7 +361,7 @@ footer{
     </a>
     <div class="cta-meta">
       <span>✓ Android 8.0+</span>
-      <span>✓ Only 7 MB</span>
+      <span>✓ Only 40 MB</span>
       <span>✓ No Ads</span>
     </div>
   </div>
@@ -347,7 +370,7 @@ footer{
     <div class="phone">
       <div class="phone-screen">
         <div class="mock-header">
-          <div class="mock-logo">🛡️</div>
+          <img src="ic_app_logo.png" alt="LinkShield" class="mock-logo-img">
           <div style="flex:1">
             <div style="font-size:11px;font-weight:700">LinkShield</div>
             <div style="font-size:9px;color:var(--muted)">Sandbox Browser</div>
@@ -534,7 +557,7 @@ footer{
 
 <footer>
   <div class="foot-logo">
-    <div class="nav-logo-icon">🛡️</div>
+    <img src="ic_app_logo.png" alt="LinkShield" class="foot-logo-img">
     <span>LinkShield Sandbox</span>
   </div>
   <div class="foot-links">
@@ -548,8 +571,9 @@ footer{
 </footer>
 
 <div class="sticky-cta" id="stickyCta">
-  <div>
-    <div class="label"><strong>LinkShield Sandbox</strong>Free · 7 MB</div>
+  <div class="label">
+    <img src="ic_app_logo.png" alt="LinkShield" class="sticky-logo">
+    <div><strong>LinkShield Sandbox</strong>Free · 40 MB</div>
   </div>
   <a href="#download" class="sbtn">Download ⬇️</a>
 </div>
