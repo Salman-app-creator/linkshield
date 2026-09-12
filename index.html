@@ -66,6 +66,7 @@
   --card:rgba(15,22,35,0.7);
   --border:rgba(0,240,255,0.15);
 }
+
 html{scroll-behavior:smooth}
 body{
   font-family:'Inter',sans-serif;
@@ -120,6 +121,7 @@ nav{
   transition:transform .3s,box-shadow .3s;
   box-shadow:0 4px 15px rgba(0,240,255,0.3);
 }
+
 .nav-btn:active{transform:scale(.95)}
 
 /* Hero */
@@ -316,8 +318,7 @@ section{max-width:1200px;margin:0 auto;padding:80px 24px}
 .faq-item{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:12px;backdrop-filter:blur(20px)}
 .faq-item h4{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;margin-bottom:8px;color:var(--cyan)}
 .faq-item p{color:var(--muted);font-size:14px}
-
-footer{
+     footer{
   border-top:1px solid var(--border);
   padding:40px 24px;text-align:center;
   background:rgba(6,8,13,0.8);backdrop-filter:blur(20px);
@@ -378,7 +379,7 @@ footer{
 <nav>
   <div class="nav-inner">
     <div class="nav-logo">
-      <div class="nav-logo-icon">🛡️</div>
+      <img src="./ic_app_logo.png" alt="LinkShield" style="width:44px;height:44px;border-radius:10px;object-fit:contain;">
       <span>LinkShield</span>
     </div>
     <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0/LinkShield-v2.6.0.apk" class="nav-btn">Download APK</a>
@@ -413,7 +414,7 @@ footer{
     <div class="phone">
       <div class="phone-screen">
         <div class="mock-header">
-          <div class="mock-logo">🛡️</div>
+          <img src="./ic_app_logo.png" alt="LinkShield" style="width:36px;height:36px;border-radius:8px;object-fit:contain;">
           <div style="flex:1">
             <div style="font-size:11px;font-weight:700">LinkShield</div>
             <div style="font-size:9px;color:var(--muted)">Sandbox Browser</div>
@@ -536,7 +537,6 @@ footer{
     </div>
   </div>
 </section>
-
 <!-- ═══════════════════════════════════════════════════════════
      PRICING
      ═══════════════════════════════════════════════════════════ -->
@@ -575,8 +575,9 @@ footer{
       <a href="#download" class="pbtn pbtn-pro">Get Pro</a>
     </div>
   </div>
-</section>  
-  <!-- ═══════════════════════════════════════════════════════════
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
      FAQ
      ═══════════════════════════════════════════════════════════ -->
 <section class="reveal">
@@ -614,7 +615,7 @@ footer{
      ═══════════════════════════════════════════════════════════ -->
 <footer>
   <div class="foot-logo">
-    <img src="ic_app_logo.png" alt="LinkShield Sandbox secure browser logo" class="foot-logo-img">
+    <img src="./ic_app_logo.png" alt="LinkShield Sandbox secure browser logo" style="width:44px;height:44px;border-radius:10px;object-fit:contain;">
     <span>LinkShield Sandbox</span>
   </div>
   <div class="foot-links">
@@ -632,7 +633,7 @@ footer{
      ═══════════════════════════════════════════════════════════ -->
 <div class="sticky-cta" id="stickyCta">
   <div class="label">
-    <img src="ic_app_logo.png" alt="LinkShield Sandbox app icon" class="sticky-logo">
+    <img src="./ic_app_logo.png" alt="LinkShield Sandbox app icon" style="width:40px;height:40px;border-radius:10px;object-fit:contain;">
     <div><strong>LinkShield Sandbox</strong>Free · 40 MB</div>
   </div>
   <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0/LinkShield-v2.6.0.apk" class="sbtn">Download ⬇️</a>
