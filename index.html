@@ -361,10 +361,16 @@ section{max-width:1200px;margin:0 auto;padding:80px 24px}
 .trust-item{display:flex;align-items:center;gap:6px;color:var(--muted);font-size:12px;font-weight:500}
 .trust-item .dot{color:var(--green)}
 </style>
-</head>
+   <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1196ZNGN9H"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1196ZNGN9H');
+</script>
+</head>  
 <body>
-<body>
-
 <div class="bg-orbs">
   <div class="orb orb1"></div>
   <div class="orb orb2"></div>
@@ -663,6 +669,16 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 reveals.forEach(el => observer.observe(el));
+     // ── Download button tracking ──
+document.querySelectorAll('a[href*=".apk"]').forEach(function(link) {
+  link.addEventListener('click', function() {
+    gtag('event', 'download', {
+      'event_category': 'APK',
+      'event_label': 'LinkShield Download',
+      'value': 1
+    });
+  });
+});
 </script>
 
 </body>
