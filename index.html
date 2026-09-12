@@ -44,7 +44,7 @@
   "applicationCategory": "SecurityApplication",
   "description": "A privacy-first secure browser that opens every link in an isolated sandbox. Includes media grabber, ad blocker, and QR scanner.",
   "url": "https://salman-app-creator.github.io/LinkShield-SandBox/",
-  "downloadUrl": "https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0.0/LinkShield-v2.6.0.apk",
+  "downloadUrl": "https://github.com/Salman-app-creator/linkshield/releases/download/v2.7/LinkShield-v2.7.apk",
   "softwareVersion": "2.6.0.0",
   "fileSize": "40MB",
   "offers": { "@type": "Offer", "price": "499", "priceCurrency": "PKR" },
@@ -388,7 +388,7 @@ section{max-width:1200px;margin:0 auto;padding:80px 24px}
       <img src="./ic_app_logo.png" alt="LinkShield" style="width:44px;height:44px;border-radius:10px;object-fit:contain;">
       <span>LinkShield</span>
     </div>
-    <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0.0/LinkShield-v2.6.0.apk" class="nav-btn">Download APK</a>
+    <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.7/LinkShield-v2.7.apk" class="nav-btn">Download APK</a>
   </div>
 </nav>
 
@@ -404,7 +404,7 @@ section{max-width:1200px;margin:0 auto;padding:80px 24px}
   <p>LinkShield Sandbox is a privacy-first secure browser that opens every link in an isolated environment. No tracking. No cookies. No data leak. Download the free APK for Android.</p>
 
   <div class="cta-wrap" id="download">
-    <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0.0/LinkShield-v2.6.0.apk" class="cta">
+    <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.7/LinkShield-v2.7.apk" class="cta">
       <span class="cta-icon">⬇️</span>
       Download Free APK
     </a>
@@ -624,13 +624,17 @@ section{max-width:1200px;margin:0 auto;padding:80px 24px}
     <span>LinkShield Sandbox</span>
   </div>
   <div class="foot-links">
-    <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0.0/LinkShield-v2.6.0.apk">Download</a>
+    <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.7/LinkShield-v2.7.apk">Download</a>
     <a href="./features.html">Features</a>
     <a href="./privacy-policy.html">Privacy Policy</a>
     <a href="./terms.html">Terms</a>
     
   </div>
-  <div class="foot-copy">© 2026 LinkShield Sandbox · Made in Pakistan 🇵🇰</div>
+  <div class="foot-copy">
+    © 2026 LinkShield Sandbox<br>
+    Created with ❤️ by <strong>Salman Latif</strong><br>
+    Made in Pakistan 🇵🇰
+  </div>
 </footer>
 
 <!-- ═══════════════════════════════════════════════════════════
@@ -641,23 +645,36 @@ section{max-width:1200px;margin:0 auto;padding:80px 24px}
     <img src="./ic_app_logo.png" alt="LinkShield Sandbox app icon" style="width:40px;height:40px;border-radius:10px;object-fit:contain;">
     <div><strong>LinkShield Sandbox</strong>Free · 40 MB</div>
   </div>
-  <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0.0/LinkShield-v2.6.0.apk" class="sbtn">Download ⬇️</a>
+  <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.7/LinkShield-v2.7.apk" class="sbtn">Download ⬇️</a>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════
      JAVASCRIPT
      ═══════════════════════════════════════════════════════════ -->
-<script>
-// Sticky CTA appears after scrolling
+// ── Sticky CTA with auto-hide when footer visible ──
 const stickyCta = document.getElementById('stickyCta');
+const footer = document.querySelector('footer');
 let lastScroll = 0;
+
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
-  if (y > 400 && y > lastScroll) {
+  const footerTop = footer.getBoundingClientRect().top;
+  const windowHeight = window.innerHeight;
+
+  // Footer visible hai? (150px ke andar aa gaya)
+  const footerVisible = footerTop < windowHeight + 150;
+
+  if (footerVisible) {
+    // Footer visible → CTA hide
+    stickyCta.classList.remove('show');
+  } else if (y > 400 && y > lastScroll) {
+    // Neeche scroll + 400px se zyada → CTA show
     stickyCta.classList.add('show');
   } else if (y < lastScroll || y < 400) {
+    // Upar scroll ya top pe → CTA hide
     stickyCta.classList.remove('show');
   }
+
   lastScroll = y;
 });
 
