@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══════════════════════════════════════════════════════════
+     SEO META TAGS — FEATURES PAGE
+     ═══════════════════════════════════════════════════════════ -->
+<title>Features — Secure Sandbox Browser & Media Grabber | LinkShield</title>
+<meta name="description" content="Explore LinkShield Sandbox features: isolated browsing, multi-source threat detection (Google Safe Browsing, URLhaus, OTX), media grabber for YouTube & Instagram, ad blocker, QR scanner, and reader mode. Free APK download for Android.">
+<meta name="keywords" content="secure browser features, sandbox browser app features, media grabber features, ad blocker browser features, privacy browser features, QR scanner browser, reader mode browser, threat detection browser, safe browsing app Android">
+<meta name="author" content="LinkShield Sandbox">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="theme-color" content="#06080d">
+<link rel="canonical" href="https://salman-app-creator.github.io/LinkShield-SandBox/features.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://salman-app-creator.github.io/LinkShield-SandBox/features.html">
+<meta property="og:title" content="Features — Secure Sandbox Browser & Media Grabber | LinkShield">
+<meta property="og:description" content="8 powerful features: isolated sandbox, multi-source threat check, media grabber, ad blocker, QR scanner, reader mode, zero data persistence, HTTPS enforcement.">
+<meta property="og:image" content="https://salman-app-creator.github.io/LinkShield-SandBox/ic_app_logo.png">
+<meta property="og:site_name" content="LinkShield Sandbox">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Features — LinkShield Sandbox Secure Browser">
+<meta name="twitter:description" content="Isolated browsing, threat detection, media grabber, ad blocker, QR scanner, and reader mode — all in one secure Android browser.">
+<meta name="twitter:image" content="https://salman-app-creator.github.io/LinkShield-SandBox/ic_app_logo.png">
+
+<!-- Preload -->
+<link rel="preload" as="image" href="./ic_app_logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCHEMA MARKUP — Rich Snippets
+     ═══════════════════════════════════════════════════════════ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://salman-app-creator.github.io/LinkShield-SandBox/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Features",
+      "item": "https://salman-app-creator.github.io/LinkShield-SandBox/features.html"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the isolated sandbox feature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every link opens in an isolated WebView environment. No passwords auto-fill, no cookies are saved, and no tracking occurs. Your main browser stays untouched."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the multi-source threat detection work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before any URL loads, it is checked against Google Safe Browsing, URLhaus, AlienVault OTX, ThreatFox, and PhishStats for real-time protection against phishing and malware."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which platforms does the Media Grabber support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Media Grabber supports Instagram, Facebook, TikTok, Twitter/X, and 1000+ other platforms through Cobalt and yt-dlp integration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is LinkShield Sandbox free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. LinkShield Sandbox is free with a 7-day trial and 20 free downloads. Pro upgrade is a one-time payment of Rs. 499 for unlimited access."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#06080d;--cyan:#00f0ff;--green:#00ff94;--purple:#7c3aed;--pink:#ec4899;
+  --text:#e6f1ff;--muted:#8899aa;--card:rgba(15,22,35,0.7);--border:rgba(0,240,255,0.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;min-height:100vh;overflow-x:hidden}
+
+.bg-orbs{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.3;animation:float 20s ease-in-out infinite}
+.orb1{width:400px;height:400px;background:var(--cyan);top:-100px;left:-100px}
+.orb2{width:350px;height:350px;background:var(--purple);top:50%;right:-120px;animation-delay:-5s}
+.orb3{width:300px;height:300px;background:var(--pink);bottom:-80px;left:20%;animation-delay:-10s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.1)}66%{transform:translate(-30px,30px) scale(0.9)}}
+
+.grid-bg{position:fixed;inset:0;z-index:-1;
+  background-image:linear-gradient(rgba(0,240,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,240,255,0.04) 1px,transparent 1px);
+  background-size:50px 50px;
+  mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);
+  -webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);
+}
+  nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(6,8,13,0.7);border-bottom:1px solid var(--border);padding:14px 20px}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;text-decoration:none;color:var(--text)}
+.nav-logo-img{width:44px;height:44px;border-radius:10px;object-fit:contain;background:rgba(0,240,255,0.06);padding:2px;border:1px solid rgba(0,240,255,0.25);box-shadow:0 0 15px rgba(0,240,255,0.2)}
+.nav-btn{background:linear-gradient(135deg,var(--cyan),var(--green));color:#000;padding:9px 20px;border-radius:24px;font-weight:700;font-size:13px;text-decoration:none;transition:transform .3s;box-shadow:0 4px 15px rgba(0,240,255,0.3)}
+.nav-btn:active{transform:scale(.95)}
+
+.hero{max-width:900px;margin:0 auto;padding:60px 24px 40px;text-align:center}
+.breadcrumb{color:var(--muted);font-size:13px;margin-bottom:16px}
+.breadcrumb a{color:var(--muted);text-decoration:none}
+.breadcrumb a:hover{color:var(--cyan)}
+.breadcrumb span{color:var(--cyan)}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,7vw,56px);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:16px}
+.hero h1 .grad{background:linear-gradient(135deg,var(--cyan),var(--green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:clamp(14px,3.5vw,17px);max-width:600px;margin:0 auto}
+
+section{max-width:1200px;margin:0 auto;padding:60px 24px}
+.section-head{text-align:center;margin-bottom:48px}
+.section-tag{display:inline-block;color:var(--cyan);font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px}
+.section-head h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,5vw,40px);font-weight:800;line-height:1.2;margin-bottom:12px}
+.section-head p{color:var(--muted);font-size:15px;max-width:560px;margin:0 auto}
+
+.features{display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:640px){.features{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.features{grid-template-columns:repeat(3,1fr)}}
+
+.fcard{background:var(--card);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--border);border-radius:20px;padding:28px;position:relative;overflow:hidden;transition:transform .3s,border-color .3s}
+.fcard::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);opacity:0;transition:opacity .3s}
+.fcard:hover{transform:translateY(-4px);border-color:rgba(0,240,255,0.4)}
+.fcard:hover::before{opacity:1}
+.fcard-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:18px;background:linear-gradient(135deg,rgba(0,240,255,0.15),rgba(124,58,237,0.15));border:1px solid rgba(0,240,255,0.2)}
+.fcard h3{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:700;margin-bottom:10px}
+.fcard p{color:var(--muted);font-size:14px;line-height:1.7}
+
+.highlight{display:grid;grid-template-columns:1fr;gap:32px;align-items:center;margin-bottom:80px}
+@media(min-width:768px){.highlight{grid-template-columns:1fr 1fr;gap:48px}}
+.highlight-text h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(22px,4vw,32px);font-weight:700;margin-bottom:16px;line-height:1.3}
+.highlight-text h3 .grad{background:linear-gradient(135deg,var(--cyan),var(--green));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.highlight-text p{color:var(--muted);font-size:15px;margin-bottom:20px}
+.highlight-text ul{list-style:none;margin-bottom:8px}
+.highlight-text li{display:flex;align-items:flex-start;gap:10px;padding:6px 0;font-size:14px;color:#c0d0e0}
+.highlight-text li .check{color:var(--green);flex-shrink:0;font-weight:700}
+.highlight-visual{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:28px;backdrop-filter:blur(20px);display:flex;flex-direction:column;gap:14px;box-shadow:0 20px 60px rgba(0,240,255,0.08)}
+.visual-row{display:flex;align-items:center;gap:12px;padding:14px;border-radius:14px;background:rgba(0,240,255,0.04);border:1px solid rgba(0,240,255,0.1)}
+.visual-row .icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;background:linear-gradient(135deg,rgba(0,240,255,0.15),rgba(124,58,237,0.15))}
+.visual-row .text{font-size:13px;color:#c0d0e0}
+.visual-row .text strong{color:var(--text);display:block;font-size:14px;margin-bottom:2px}
+
+.faq-wrap{max-width:800px;margin:0 auto}
+.faq-item{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:12px;backdrop-filter:blur(20px)}
+.faq-item h3{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;margin-bottom:8px;color:var(--cyan)}
+.faq-item p{color:var(--muted);font-size:14px}
+
+.cta-section{max-width:800px;margin:0 auto;padding:60px 24px;text-align:center}
+.cta-section h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,5vw,36px);font-weight:800;margin-bottom:16px;line-height:1.2}
+.cta-section p{color:var(--muted);font-size:16px;margin-bottom:32px}
+.cta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--cyan),var(--green));color:#000;padding:16px 36px;border-radius:50px;font-weight:800;font-size:16px;text-decoration:none;box-shadow:0 8px 30px rgba(0,240,255,0.4);transition:transform .3s}
+.cta-btn:active{transform:scale(.96)}
+
+footer{border-top:1px solid var(--border);padding:40px 24px;text-align:center;background:rgba(6,8,13,0.8);backdrop-filter:blur(20px)}
+.foot-logo{display:inline-flex;align-items:center;gap:10px;margin-bottom:16px;font-family:'Space Grotesk',sans-serif;font-weight:700}
+.foot-logo-img{width:44px;height:44px;border-radius:10px;object-fit:contain;background:rgba(0,240,255,0.06);padding:2px;border:1px solid rgba(0,240,255,0.25)}
+.foot-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
+.foot-links a{color:var(--muted);text-decoration:none;font-size:13px;transition:color .3s}
+.foot-links a:hover{color:var(--cyan)}
+.foot-copy{color:var(--muted);font-size:12px;opacity:.7}
+</style>
+</head>
+<body>
+
+<div class="bg-orbs">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-logo">
+      <img src="./ic_app_logo.png" alt="LinkShield Sandbox secure browser logo" class="nav-logo-img">
+      <span>LinkShield</span>
+    </a>
+    <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0/LinkShield-v2.6.0.apk" class="nav-btn">Download APK</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="breadcrumb">
+    <a href="./index.html">Home</a> / <span>Features</span>
+  </div>
+  <h1>All <span class="grad">Features</span></h1>
+  <p>Everything LinkShield Sandbox offers to keep you safe, private, and productive on Android. Secure browser features designed for real protection.</p>
+</header>
+
+<section>
+  <div class="section-head">
+    <span class="section-tag">Core Features</span>
+    <h2>Built for privacy-first browsing</h2>
+    <p>Nine powerful features designed to protect your data while giving you full control over your Android browsing experience.</p>
+  </div>
+
+  <div class="features">
+    <div class="fcard">
+      <div class="fcard-icon">🛡️</div>
+      <h3>Isolated Sandbox</h3>
+      <p>Every link opens in an isolated WebView environment. No passwords auto-fill. No cookies saved. No tracking. Your real browser stays completely untouched.</p>
+    </div>
+    <div class="fcard">
+      <div class="fcard-icon">🔍</div>
+      <h3>Multi-Source Threat Check</h3>
+      <p>Powered by Google Safe Browsing, URLhaus, AlienVault OTX, ThreatFox, and PhishStats for real-time protection against phishing and malware links.</p>
+    </div>
+    <div class="fcard">
+      <div class="fcard-icon">📥</div>
+      <h3>Media Grabber</h3>
+      <p>Download videos and audio from Instagram, Facebook, TikTok, Twitter/X, and 1000+ other platforms through our Cobalt and yt-dlp integration.</p>
+    </div>
+    <div class="fcard">
+      <div class="fcard-icon">🚫</div>
+      <h3>Built-in Ad Blocker</h3>
+      <p>Blocks ads, pop-ups, and hidden tracking scripts with 500+ domain blocklist. Enjoy faster, cleaner, distraction-free browsing on Android.</p>
+    </div>
+    <div class="fcard">
+      <div class="fcard-icon">📷</div>
+      <h3>QR Code Scanner</h3>
+      <p>Scan any QR code and open it directly in the secure sandbox environment. Never worry about malicious QR codes redirecting you to dangerous sites.</p>
+       </div>
+    <div class="fcard">
+      <div class="fcard-icon">📖</div>
+      <h3>Reader Mode</h3>
+      <p>Extract the main article text from any webpage with a single tap. Removes ads, sidebars, and clutter for a clean, distraction-free reading experience.</p>
+    </div>
+    <div class="fcard">
+      <div class="fcard-icon">🔐</div>
+      <h3>Zero Data Persistence</h3>
+      <p>Close the app and everything is erased. No history, no cache, no cookies left behind. True privacy browser behaviour for Android devices.</p>
+    </div>
+    <div class="fcard">
+      <div class="fcard-icon">🔒</div>
+      <h3>HTTPS Enforcement</h3>
+      <p>Mixed content is blocked. HTTPS connections are prioritised. Green lock indicator shows secure connections. File and content URLs are completely blocked.</p>
+    </div>
+    <div class="fcard">
+      <div class="fcard-icon">👑</div>
+      <h3>Pro License System</h3>
+      <p>One-time payment unlocks unlimited downloads. SHA-256 hash-based validation keeps your license secure without storing any personal data.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <span class="section-tag">Deep Dive</span>
+    <h2>How each feature works</h2>
+    <p>A closer look at what makes LinkShield different from ordinary Android browsers.</p>
+  </div>
+
+  <div class="highlight">
+    <div class="highlight-text">
+      <h3>Secure <span class="grad">Sandbox Browser</span></h3>
+      <p>Every time you tap a link from WhatsApp, Telegram, Email, or any other app, it opens inside LinkShield's isolated sandbox — not your real browser.</p>
+      <ul>
+        <li><span class="check">✓</span> No cookies shared with your main browser</li>
+        <li><span class="check">✓</span> No password autofill from Chrome</li>
+        <li><span class="check">✓</span> No browsing history saved</li>
+        <li><span class="check">✓</span> Complete session isolation on Android</li>
+      </ul>
+    </div>
+    <div class="highlight-visual">
+      <div class="visual-row"><div class="icon">🛡️</div><div class="text"><strong>Sandbox Active</strong>Isolated browsing session</div></div>
+      <div class="visual-row"><div class="icon">🔒</div><div class="text"><strong>HTTPS Verified</strong>Secure connection confirmed</div></div>
+      <div class="visual-row"><div class="icon">✅</div><div class="text"><strong>Safe</strong>No threats detected</div></div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <div class="highlight-text">
+      <h3>Real-Time <span class="grad">Threat Detection</span></h3>
+      <p>Before any URL loads, it's checked against multiple threat intelligence databases simultaneously for maximum protection.</p>
+      <ul>
+        <li><span class="check">✓</span> Google Safe Browsing (malware, phishing)</li>
+        <li><span class="check">✓</span> URLhaus (malware distribution tracking)</li>
+        <li><span class="check">✓</span> AlienVault OTX (community threats)</li>
+        <li><span class="check">✓</span> ThreatFox (IOC database)</li>
+        <li><span class="check">✓</span> PhishStats (active phishing sites)</li>
+      </ul>
+    </div>
+    <div class="highlight-visual">
+      <div class="visual-row"><div class="icon">🚨</div><div class="text"><strong>Dangerous URL Detected</strong>Blocked automatically</div></div>
+      <div class="visual-row"><div class="icon">⚠️</div><div class="text"><strong>Suspicious URL</strong>Warning displayed</div></div>
+      <div class="visual-row"><div class="icon">🛡️</div><div class="text"><strong>Safe URL</strong>Loaded in sandbox</div></div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <div class="highlight-text">
+      <h3>Powerful <span class="grad">Media Grabber</span></h3>
+      <p>Download videos and audio from 1000+ platforms directly to your device's Downloads folder, with support for multiple qualities and MP3 audio.</p>
+      <ul>
+        <li><span class="check">✓</span> Instagram Reels &amp; Posts</li>
+        <li><span class="check">✓</span> Facebook Videos</li>
+        <li><span class="check">✓</span> TikTok Videos</li>
+        <li><span class="check">✓</span> Twitter/X Videos</li>
+        <li><span class="check">✓</span> MP3 audio-only downloads</li>
+      </ul>
+    </div>
+    <div class="highlight-visual">
+      <div class="visual-row"><div class="icon">🎵</div><div class="text"><strong>Instagram Reel</strong>MP3 Audio · Ready</div></div>
+      <div class="visual-row"><div class="icon">⬇️</div><div class="text"><strong>Downloading...</strong>65% complete</div></div>
+    </div>
+  </div>
+
+  <div class="highlight">
+    <div class="highlight-text">
+      <h3>True <span class="grad">Privacy Protection</span></h3>
+      <p>LinkShield is designed from the ground up to collect zero data. No analytics, no trackers, no data sharing — ever.</p>
+      <ul>
+        <li><span class="check">✓</span> No browsing history stored</li>
+        <li><span class="check">✓</span> No cookies persisted on device</li>
+        <li><span class="check">✓</span> No personal data collected</li>
+        <li><span class="check">✓</span> No third-party analytics</li>
+        <li><span class="check">✓</span> No advertising SDKs</li>
+        <li><span class="check">✓</span> Open source and auditable</li>
+      </ul>
+    </div>
+    <div class="highlight-visual">
+      <div class="visual-row"><div class="icon">🔒</div><div class="text"><strong>Encrypted</strong>TLS 1.3 connections</div></div>
+      <div class="visual-row"><div class="icon">🚫</div><div class="text"><strong>0 Trackers</strong>Nothing follows you</div></div>
+      <div class="visual-row"><div class="icon">🗑️</div><div class="text"><strong>Auto-Erase</strong>Data cleared on close</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <span class="section-tag">FAQ</span>
+    <h2>Frequently asked questions</h2>
+    <p>Common questions about LinkShield Sandbox features.</p>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <h3>What is the isolated sandbox feature?</h3>
+      <p>Every link opens in an isolated WebView environment. No passwords auto-fill, no cookies are saved, and no tracking occurs. Your main browser stays completely untouched.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How does the multi-source threat detection work?</h3>
+      <p>Before any URL loads, it is checked against Google Safe Browsing, URLhaus, AlienVault OTX, ThreatFox, and PhishStats for real-time protection against phishing and malware.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Which platforms does the Media Grabber support?</h3>
+      <p>Media Grabber supports Instagram, Facebook, TikTok, Twitter/X, and 1000+ other platforms through Cobalt and yt-dlp integration.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is LinkShield Sandbox free?</h3>
+      <p>Yes. LinkShield Sandbox is free with a 7-day trial and 20 free downloads. Pro upgrade is a one-time payment of Rs. 499 for unlimited access.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does LinkShield work on all Android versions?</h3>
+      <p>LinkShield Sandbox supports Android 8.0 (API 26) and above. The APK is only 40 MB and runs smoothly on most modern Android devices.</p>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="foot-logo">
+    <img src="./ic_app_logo.png" alt="LinkShield Sandbox secure browser logo" class="foot-logo-img">
+    <span>LinkShield Sandbox</span>
+  </div>
+  <div class="foot-links">
+    <a href="https://github.com/Salman-app-creator/linkshield/releases/download/v2.6.0.0/LinkShield-v2.6.0.apk">Download</a>
+    <a href="./index.html">Home</a>
+    <a href="./features.html">Features</a>
+    <a href="./privacy-policy.html">Privacy Policy</a>
+    <a href="./terms.html">Terms</a>
+    <a href="https://github.com/Salman-app-creator/linkshield">GitHub</a>
+  </div>
+  <div class="foot-copy">© 2026 LinkShield Sandbox · Made in Pakistan 🇵🇰</div>
+</footer>
+
+</body>
+</html>
