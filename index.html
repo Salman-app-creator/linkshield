@@ -652,12 +652,23 @@ section{max-width:1200px;margin:0 auto;padding:80px 24px}
      JAVASCRIPT
      ═══════════════════════════════════════════════════════════ -->
 <script>
-// ── Sticky CTA with auto-hide when footer visible ──
+<script>
+// ── 1. Scroll reveal ──
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('in');
+  });
+}, { threshold: 0.1 });
+reveals.forEach(el => observer.observe(el));
+
+// ── 2. Sticky CTA with auto-hide ──
 const stickyCta = document.getElementById('stickyCta');
 const footer = document.querySelector('footer');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
+  if (!stickyCta || !footer) return;
   const y = window.scrollY;
   const footerTop = footer.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
@@ -673,16 +684,7 @@ window.addEventListener('scroll', () => {
   lastScroll = y;
 });
 
-// Scroll reveal
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('in');
-  });
-}, { threshold: 0.1 });
-reveals.forEach(el => observer.observe(el));
-
-// ── Download button tracking ──
+// ── 3. Download button tracking ──
 document.querySelectorAll('a[href*=".apk"]').forEach(function(link) {
   link.addEventListener('click', function() {
     gtag('event', 'download', {
