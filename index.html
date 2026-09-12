@@ -651,6 +651,7 @@ section{max-width:1200px;margin:0 auto;padding:80px 24px}
 <!-- ═══════════════════════════════════════════════════════════
      JAVASCRIPT
      ═══════════════════════════════════════════════════════════ -->
+<script>
 // ── Sticky CTA with auto-hide when footer visible ──
 const stickyCta = document.getElementById('stickyCta');
 const footer = document.querySelector('footer');
@@ -660,21 +661,15 @@ window.addEventListener('scroll', () => {
   const y = window.scrollY;
   const footerTop = footer.getBoundingClientRect().top;
   const windowHeight = window.innerHeight;
-
-  // Footer visible hai? (150px ke andar aa gaya)
   const footerVisible = footerTop < windowHeight + 150;
 
   if (footerVisible) {
-    // Footer visible → CTA hide
     stickyCta.classList.remove('show');
   } else if (y > 400 && y > lastScroll) {
-    // Neeche scroll + 400px se zyada → CTA show
     stickyCta.classList.add('show');
   } else if (y < lastScroll || y < 400) {
-    // Upar scroll ya top pe → CTA hide
     stickyCta.classList.remove('show');
   }
-
   lastScroll = y;
 });
 
@@ -686,7 +681,8 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 reveals.forEach(el => observer.observe(el));
-     // ── Download button tracking ──
+
+// ── Download button tracking ──
 document.querySelectorAll('a[href*=".apk"]').forEach(function(link) {
   link.addEventListener('click', function() {
     gtag('event', 'download', {
